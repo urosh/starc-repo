@@ -1,0 +1,166 @@
+
+
+.content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	&.menu-active{
+		.container{
+				transform: translateX(-$side-menu-width);
+			
+		}
+		.content-1{
+			transform: translateX(-$side-menu-width);
+		}
+		
+	}
+	
+}
+
+
+
+section.module.parallax-1 {
+	background-image:url('../images/bg3.png');
+}
+
+
+section.module.parallax {
+	//z-index: 0;
+	height: 100%;
+	background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+}
+
+section.module.parallax .container {
+	z-index: 0;
+	margin: 0;
+	height: 100%;
+	position: fixed;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+
+}
+
+.container .welcome-row{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	
+}
+
+.container .content .content-1{
+	color: $mynavy;
+	color: $darker_grey;
+	color: $typo_grey;
+	position: relative;
+	font-family: Inconsolata;
+	padding: 0;
+	//z-index: 10;
+	background: white;
+	height: 800px;
+		
+
+	.my-module{
+		
+		//background: white;
+		//z-index: 100000000;
+		margin-top: 0;
+		//border: solid 1px white;
+
+		
+	}
+
+	h2{
+		color: $typo_grey;
+	}
+	transition: all 0.3s;
+
+	
+}
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+.content .welcome{
+	text-align: center;
+	color: white;
+	overflow: auto;
+	z-index: 0;
+
+	//transition: all 0.3s;
+		//	-webkit-transition: all 0.3s;
+
+	h1,h2{
+		display: block;
+		margin: 0;
+		padding: 0;
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+	}
+	.large{
+		font-size: 3.2em;
+		line-height: 1.1em; 
+	}
+	.small {
+			font-family: 'Lato', sans-serif;
+			margin-top: 30px;
+			font-size: 1em;
+			font-size: 1.4em;
+			font-weight: lighter;
+	}
+
+}
+
+ .content .buttons{
+ 	
+ 	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+
+ 	margin-top: 20px;
+ 	text-align: center;
+ 	
+ 	a:last-child{
+ 		margin-left:5px; 
+ 	}
+	.button{
+ 		background: transparent;
+ 		border: solid 2px white;
+ 		width: 180px;
+ 		letter-spacing: 1px;
+ 		font-weight: 300;
+ 		&:hover{
+ 			border-color: #b2b2b2;;
+ 			color: $darker_grey;
+ 			color: #b2b2b2;
+ 			z-index: 0;
+ 		}
+ 	}
+}
+
+	
+	
+
+
+
+
+
+

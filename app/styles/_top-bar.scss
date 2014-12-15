@@ -1,0 +1,63 @@
+.top-bar{
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	background: $mynavy;
+	z-index:10;
+	.logo,
+	.text-holder{
+		//display: inline-block;
+	}
+	
+	.logo{
+		background: url(../images/cyi-logo.png) no-repeat;
+		@include width-height(54px, 60px);
+		background-size: 54px 54px;
+		background-position: center; 
+		margin: 0;
+		float: left;
+	}
+
+	.text-holder{
+		float: left;
+		position: relative;
+		padding: 0;
+		margin: 0;
+		@include width-height(191px, 60px);
+		margin-left: 5px;
+		
+	}
+
+	h1, h3{
+		color: white;
+		font-family: 'Lato', sans-serif;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		left: 0;
+		width: 70px;
+		line-height: 1.1em;
+	}
+	h1{
+		font-size: 1.7em;
+		top: 7px;
+		height: 1.1em;
+	}
+
+	h3{
+		top: 32px;
+		font-size: 1.18em;
+		font-weight: lighter;
+	}
+
+}
+
+
+
+
+	
+
+
+

@@ -1,0 +1,88 @@
+<main class="login-container">
+  <header class="top-bar">
+    <div class="logo-holder">
+      <div class="logo"></div>
+      <div class="text-holder">
+        <h1>STARC</h1>
+        <h3>repository</h3>
+      </div>
+    </div>
+  </header>
+   
+  <div class="row login-cnt">
+    <form name="loginForm"
+          ng-submit="vm.submit()" 
+          novalidate>
+      <div ng-class="(vm.notificationActive)? 'medium-10 large-9 small-10 small-centered columns notification active' : 'medium-10 large-9 small-10 small-centered columns notification'">
+        <div class="notification-cont">Username and password are not recognized. Please try again.</div>
+      </div>    
+      <div class="medium-10 large-9 small-10 small-centered  columns">
+        
+        <div class="row row2">
+          <div class="medium-5 small-12 columns form-input-column">
+            <div class="row collapse">
+              <div class="small-12 columns error-columns">
+                <div ng-messages="loginForm.username.$error" ng-if="loginForm.$submitted || loginForm.username.$touched">
+                  <div ng-message="required">Username is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="row collapse">
+              <div class="small-1 medium-2  columns">
+                <span class="prefix fi-torso"></span>
+              </div>
+              <div class="small-11 medium-10 columns">
+                <input  name="username" 
+                          ng-model="data.username" 
+                          placeholder="Username" 
+                          required 
+                          ng-required="true"
+                          minlength="5"
+                          type="text"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="medium-5 small-12 columns form-input-column">
+            <div class="row collapse">
+              <div class="small-12 columns error-columns ">
+                <div ng-messages="loginForm.password.$error" ng-if="loginForm.$submitted || loginForm.password.$touched">
+                  <div ng-message="required">Password is required</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row collapse">
+              <div class="small-1 medium-2 columns">
+                <span class="prefix fi-lock"></span>
+              </div>
+              <div class="small-11 medium-10 columns">
+                <input  name="password" 
+                        ng-model="data.password" 
+                        required 
+                        placeholder="Password" 
+                        type="password"/>
+              </div>
+            </div>
+          
+          </div>
+
+          <div class="medium-2 small-12 columns form-input-column button-column">
+            <button type="submit">LOGIN</button>
+          </div>
+
+          <div class="small-12 acolumn columns">
+            <a href="#/register">Register here</a>
+          </div>
+
+        </div>
+
+       
+
+      </div>
+    </form>
+    
+  </div>
+
+  
+</main>

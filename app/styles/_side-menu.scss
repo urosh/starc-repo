@@ -1,0 +1,262 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-700ka');
+	src:url('../fonts/icomoon.eot?#iefix-700ka') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-700ka') format('woff'),
+		url('../fonts/icomoon.ttf?-700ka') format('truetype'),
+		url('../fonts/icomoon.svg?-700ka#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+$text-color: $nice-grey;
+
+
+.side-menu{
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	right: -$side-menu-width;
+	width: $side-menu-width;
+	z-index: 100;
+	background: $mynavy;
+	font-family: 'Lato', Arial, sans-serif;
+	//background: $light_blue;
+	transition: all 0.3s;
+	//-webkit-transition: all 0.3s;
+	border-top: solid 1px $text-color;
+	//border-left: solid 1px white;
+	&.active{
+		right: 0;
+	}
+}
+
+.side-menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.side-menu ul li{
+	margin: 0;
+	padding: 0;
+	border-bottom: solid 1px $text-color;
+	display: list-item;
+	text-align: -webkit-match-parent;
+	height: 60px;
+	line-height: 60px;
+
+}
+
+.side-menu ul li span{
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	font-size: 2.4em;
+	color: $text-color;
+	&.small{
+		font-size: 2em;
+	}
+	//height: 60px;
+	//	display: inline;
+	//background: red;
+	margin-left: 10px;
+	line-height: 60px;
+	padding: 0;
+	
+}
+
+.icon-dlibrary:before {
+	content: "\e601";
+}
+.icon-reconstruction:before {
+	content: "\e60a";
+}
+.icon-document:before {
+	content: "\e608";
+}
+.icon-collaboration:before {
+	content: "\e602";
+}
+.icon-tools:before {
+	content: "\e603";
+}
+.icon-virtual_museum:before {
+	content: "\e600";
+}
+.icon-home:before {
+	content: "\e604";
+}
+.icon-library:before {
+	content: "\e605";
+}
+.icon-user:before {
+	content: "\e606";
+}
+.icon-explore:before {
+	content: "\e607";
+}
+
+
+
+
+
+.side-menu ul li div{
+	float: left;
+	height: 60px;
+	&:first-child{
+		width: 60px;
+
+	}
+//	line-height: 60px;
+}
+.side-menu ul li a{
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: $text-color;
+	font-size: 1.2em;
+	//height: 1.1em;
+	line-height: 60px;
+	height: 60px;
+	font-weight: lighter;
+	padding: 0 0 0 14px;
+	display: inline-block;
+
+	//background:red;
+}
+
+.menu-btn-container{
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-weight: 300;
+	position: fixed;
+	width: $side-menu-width;
+	height: 60px;
+	top: 0;
+	right: 0;
+	z-index: 10000;
+	//border: solid 1px red;
+	padding: 0;
+	
+
+
+	
+}
+.menu-title{
+	height: 60px;
+	width: $side-menu-width;
+	float: left;
+	line-height: 60px;
+	font-size: 1.3em;
+	padding-left: 24px;
+	transition: all 0.3s;
+	transform: translateX(300px);
+	background: $light_blue;
+	color: $text-color;
+	&.active{
+		transform: translateX(0);
+		
+	}
+}
+
+
+.btn-cnt{
+	position: fixed;
+	top: 0;
+	right: 0;
+	float: left;
+	height: 60px;
+	width: 60px;
+//	background: red;
+}
+.menu-btn{
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	top: 20px;
+	right: 20px;
+	//background: red;
+	z-index: 100000;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+
+	&.active{
+		span{
+			background-color: transparent;
+		}
+		span:before{
+			transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
+		}
+		span:after{
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+		}
+	}
+}
+
+.menu-btn	span{
+	content: '';
+	font-size: 0px;
+	display: block;
+	width: 100%;
+	height: 4px;
+	top: 50%;
+	left: 0;
+	position: absolute;
+	margin-top: -2px;
+	background: white;
+	background: $text-color;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+
+.menu-btn	span:before, 
+.menu-btn span:after{
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: white;
+	background: $text-color;
+	content: '';
+	width: 100%;
+	height: 100%;
+	
+}
+.menu-btn span:before{
+	transform: translateY(-200%);
+	-webkit-transform: 	translateY(-200%);
+}
+
+.menu-btn	span:after{
+	transform: translateY(200%);	
+	-webkit-transform: 	translateY(200%);
+}
+		
+
+
+
+
