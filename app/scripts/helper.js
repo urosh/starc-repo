@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
 	console.log('ok we are good');
 	var btn = document.querySelector('.menu-btn');
 	console.log(btn);
@@ -22,4 +22,4 @@
 	}
 
 
-})()
+})()*/

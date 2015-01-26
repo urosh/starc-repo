@@ -26,7 +26,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-      <div ng-view="" class="main-container"></div>
+      <div ui-view class="main-container"></div>
 
     
 
@@ -57,14 +57,17 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/classie/classie.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
         
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/app.routes.js"></script>
+        <script src="scripts/app.states.js"></script>
 
         <!-- Home  -->
         <script src="scripts/home/home.controller.js"></script>
@@ -72,8 +75,11 @@
         <!-- Authentication  -->
 
         <script src="scripts/authentication/authentication.module.js"></script>
+        <script src="scripts/authentication/auth.token.factory.js"></script>
         <script src="scripts/authentication/auth.factory.js"></script>
+        <script src="scripts/authentication/auth.interceptor.factory.js"></script>
         <script src="scripts/authentication/login.controller.js"></script>
+        <script src="scripts/authentication/test.controller.js"></script>
         <script src="scripts/authentication/register.controller.js"></script>
 
 

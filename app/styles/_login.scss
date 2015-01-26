@@ -17,6 +17,7 @@ $form-dim: 35px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	color: white;
+	perspective: 1000px;
 	
 }
 
@@ -24,6 +25,7 @@ $form-dim: 35px;
 .login-cnt .error{
 	width: 260px;
 	color: $gold;
+	color: black;
 	//color: $links_yellow;
 	//color: $red3;
 	font-size: 0.8em;
@@ -45,22 +47,44 @@ $form-dim: 35px;
 	.login-cnt .form-input-column{
 		padding: 0;
 		margin: 0;
-		margin-bottom: 15px;
+		margin-bottom: 5px;
 	}
 	
 	.login-cnt{
 		position: relative;
-		top: 200px;
-		height: 150px;
+		//top: 200px;
+		//height: 150px;
+		position: relative;
+		top: 50%;
+		height: 315px;
+		//transform: translateY(-50%);
+		transform: translateY(-170px);
+		a{
+			font-size: 0.85em;
+		}
+		
 	}
 
 	.login-cnt button{
 		width: 100%;
 	}
 
+	
 	.login-cnt .button-column{
-		margin-bottom: 0;
+		
+		margin: 15px 0 0 0;
 	}
+
+	.login-cnt .notification{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		.notification-cont{
+			padding: 10px 3px;
+			height: 40px;
+			font-size: 0.8em;
+		}
+	}
+
 	
 }
 
@@ -69,9 +93,8 @@ $form-dim: 35px;
 	.login-cnt .notification{
 		padding: 0;
 		transform: rotateX(-90deg);
+		transform-style: preserve-3d;
 		transition: all 0.3s;
-		margin-bottom: 20px;
-
 		opacity: 0;
 		transform-origin: 100% 35px;
 
@@ -80,13 +103,8 @@ $form-dim: 35px;
 			transform: rotateX(0deg);
 		}
 		.notification-cont{
-			height: 70px;
 			background: $red1;
-			padding: 20px 10px;
-			font-size: 1.1em;
-			// /text-align: center;
-
-			
+			font-weight: 300;
 		}
 	}
 
@@ -94,17 +112,18 @@ $form-dim: 35px;
 
 	.login-cnt button{
 		height: $form-dim;
+		line-height: $form-dim;
 		padding: 0 30px;
 		border-radius: 3px;
 		font-weight: 300;
-		font-size: 0.75em;
+		font-size: 0.8em;
 		letter-spacing: 1px;
 		margin: 0;
 		width: 100%;
 	}
 
 	.login-cnt span.prefix{
-		font-size: 1.5em;
+		font-size: 1.2em;
 		color: $mynavy;
 		text-align: center;
 		height: $form-dim;
@@ -117,18 +136,18 @@ $form-dim: 35px;
 		height: $form-dim;
 		border: none;
 		box-shadow: none;
-		font-size: 1em;
+		font-size: 0.9em;
 		font-weight: lighter;
 		background: #fff;
 		color: $typo_grey;
 		margin: 0;
 	}
-	.row1, .row2{
+
+	.login-cnt .prefix{
+		font-size: 0.8em;
+		padding-left: 7px;
 	}
 
-	.login-cnt .row1 .columns{
-		padding: 0;
-	}
 	
 	.login-cnt .acolumn{
 		padding: 0 ;
@@ -136,8 +155,7 @@ $form-dim: 35px;
 	}
 
 	.login-cnt .error-columns{
-		height: 1.6em;
-
+		height: 1.62em;
 		color: $gold;
 		font-size: 0.8em;
 	}
@@ -148,7 +166,9 @@ $form-dim: 35px;
 @media #{$medium-up} {
 	.login-cnt .notification{
 		.notification-cont{
-			margin: 0 4px 0 3px;
+			margin: 0 4px 15px 3px;
+			padding: 10px;
+			height: 50px;
 		}
 
 
@@ -160,9 +180,7 @@ $form-dim: 35px;
 		//transform: translateY(-50%);
 		transform: translateY(-130px);
 		span.prefix{
-			//padding: 0 5px;
-			
-			//font-size: 1.2em;
+			font-size: 1.2em;
 		}
 		
 		input[type="password"]{

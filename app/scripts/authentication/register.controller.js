@@ -18,7 +18,11 @@
 					AuthFactory.register(data).then(function success(response){
 					vm.notificationIndex = 2;
 					vm.notificationMessage = response.data.message;
+					
 				}, handleError);	
+			}else{
+				vm.notificationMessage = "You did not fill in the form. Please try again.";
+				vm.notificationIndex = 1;		
 			}
 				
 		}

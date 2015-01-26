@@ -26,7 +26,15 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
-      'app/scripts/**/*.js',
+      'bower_components/angular-messages/angular-messages.js',
+      'bower_components/angular-jwt/dist/angular-jwt.js',
+      'app/scripts/authentication/authentication.module.js',
+
+      'app/scripts/app.js',
+      'app/scripts/authentication/*.js',
+      'app/scripts/controllers/*.js',
+      'app/scripts/home/*.js',
+      'app/scripts/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
@@ -48,11 +56,20 @@ module.exports = function(config) {
     browsers: [
       'PhantomJS'
     ],
-
+    // Code coverage report
+    reporters: ['progress', 'coverage'],  
+    preprocessors: {  
+      'app/scripts/**/*.js': ['coverage']
+    },
+    coverageReporter: {  
+      type: 'html',
+      dir: 'coverage'
+    },
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-coverage'
     ],
 
     // Continuous Integration mode

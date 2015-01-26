@@ -13,9 +13,7 @@ $nice-grey: #d3d3d3;
 $typo_grey: #565A5C;
 $gold: #CFB87C;
 /*  */
-$red1: #c0392b;
-$red2: #A5281B;
-$red3: #b30000;
+
  
 $tirkiz: #5ba4a4;
 $blue1: #deebf7;
@@ -30,6 +28,7 @@ $navy : #0B0B3B;
 $mynavy : #2d3956;
 
 $side-menu-width: 300px;
+@import "my-colors";
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;

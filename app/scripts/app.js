@@ -13,12 +13,20 @@ angular
     
     'ngCookies',
     'ngResource',
-    'ngRoute',
+    'ui.router',
     'ngSanitize',
     'ngTouch',
+    'ngMessages',
     'app.authentication',
-    'ngMessages'
-  ]);
+    'angular-jwt'
+    
+  ], config);
+  config.$inject = ['$httpProvider']
+  function config($httpProvider) {
+    $httpProvider.interceptors.push('AuthInterceptor');
+  }
+angular.module('starcRepoApp')
+  .constant('API_URL', 'http://localhost:8000/api');
   /*.config(function ($routeProvider) {
     $routeProvider
       .when('/', {

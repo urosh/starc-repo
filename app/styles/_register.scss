@@ -1,4 +1,4 @@
-$form-dim: 45px;
+$form-dim: 40px;
 
 
 
@@ -29,13 +29,7 @@ $form-dim: 45px;
 	//opacity: 1;
 	transform: translateY(-200%);
 
-	div{
-		height: 80px;
-		padding: 0 10px;
-		line-height: 80px;
-		text-align: center;
-		
-	}
+	
 
 	&.green{
 		//transform: rotateX(80deg);
@@ -56,43 +50,6 @@ $form-dim: 45px;
 	}
 
 }
-/* .register-container .notification{
-	position: relative;
-	top: 0px;
-	z-index: 11;
-	transform: translateY(-90px);
-	//transform: translateX(-10%);
-
-	transition: all 0.3s;
-	&.active{
-		transform: translateY(60px);
-	}
-
-	.notification-column{
-		background: green;
-		padding: 0 14px;
-		div{
-			background: $red1;
-			opacity: 0.7;
-			height: 90px;
-			padding: 30px 10px;
-			text-align: center;
-			font-size: 1.1em;
-		}	
-	}
-
-	&.green{
-		.notification-column{
-			div{
-				padding: 20px 10px;
-				background: green;
-			}	
-		}
-	}
-	
-}
-
- */
 
 
 
@@ -107,14 +64,45 @@ $form-dim: 45px;
 
 @media #{$small-only}{
 	
-	/* .register-cnt{
-		position: relative;
-		top: 200px;
-		height: 150px;
+	.notification-column{
+		div{
+			//height: 40px;
+			padding: 10px 3px;
+			font-size: 0.85em;
+		}
 
-	} */
-	
+		&.green{
+			//transform: rotateX(80deg);
+			opacity: 1;
+			transform: translateY(0);
+			div{
+				//line-height: 20px;
+				padding: 10px 5px;
+				background: green;
+			}
+		}
+		&.red{
+			opacity: 1;
+			transform: translateY(0);
+			div{
+				background: $red1;
+			}
+		}
+
+	}
+	.register-cnt input{
+		height: $form-dim;
+		border: none;
+		box-shadow: none;
+		font-size: 0.8em;
+		font-weight: lighter;
+		background: #fff;
+		color: $typo_grey;
+		margin: 0;
+	}
+
 }
+
 
 @media #{$small-up} { 
 	.register-cnt{
@@ -141,10 +129,12 @@ $form-dim: 45px;
 	}
 
 	.register-cnt span.prefix{
-		font-size: 1.5em;
+		font-size: 1.2em;
+		padding-left: 5px;
 		color: $mynavy;
 		text-align: center;
 		height: $form-dim;
+
 		line-height: $form-dim;
 		border: none;
 		background: #fff;
@@ -154,7 +144,7 @@ $form-dim: 45px;
 		height: $form-dim;
 		border: none;
 		box-shadow: none;
-		font-size: 1.1em;
+		//font-size: 1.1em;
 		font-weight: lighter;
 		background: #fff;
 		color: $typo_grey;
@@ -163,10 +153,9 @@ $form-dim: 45px;
 
 	
 	.register-cnt .error-columns{
-		height: 1.4em;
-		height: 30px;
-		line-height: 30px;
-		font-size: 1em;
+		height: 25px;
+		line-height: 25px;
+		font-size: 0.8em;
 		color: $gold;
 	}
 	
@@ -176,6 +165,36 @@ $form-dim: 45px;
 }
 
 
+@media #{$medium-up}{
+	$form-dim: 45px;
+
+	.register-cnt span.prefix{
+		font-size: 1.6em;
+		padding-left: 5px;
+		height: $form-dim;
+
+		line-height: $form-dim;
+	}
+
+	.register-cnt input{
+		height: $form-dim;
+		font-size: 1em;
+	}
+
+	.notification-column{
+		div{
+			//height: 60px;
+			padding: 15px 10px;
+			font-size: 1em;
+			
+		}
+		margin-bottom: 10px;
+
+
+	}
+
+
+}
 
 @media #{$large-up} {
 	.reister-cnt span.prefix{
