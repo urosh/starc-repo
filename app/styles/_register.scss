@@ -4,7 +4,7 @@ $form-dim: 40px;
 
 
 .register-container{
-	position: relative;
+	position: fixed;
 	overflow: auto;
 	overflow-y: hidden;
 	top: 0;
@@ -18,7 +18,29 @@ $form-dim: 40px;
 	font-weight: 300;
 	color: white;
 	
+	.form-out{
+		display: none;
+	}
+
+	.success-message{
+		font-size: 1.1em;
+		margin-top: 120px;
+		a{
+			&:hover{
+				text-decoration: underline;	
+				color: $orange4;
+			}
+			color: $orange4;
+		}
+	}
+
+	.success-message.inactive {
+		display: none;
+	
+		//visibility: hidden;
+	}
 }
+
 
 .notification-column{
 	
@@ -106,14 +128,13 @@ $form-dim: 40px;
 
 @media #{$small-up} { 
 	.register-cnt{
-		
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
-		transform: translateY(-240px);
+		transform: translateY(-202px);
 		
 		
-		height: 310px;
+		height: 345px;
 	
 	}
 
@@ -157,6 +178,8 @@ $form-dim: 40px;
 		line-height: 25px;
 		font-size: 0.8em;
 		color: $gold;
+		
+		transition: all 0.3s;
 	}
 	
 	

@@ -1,0 +1,145 @@
+.explore-container{
+	position: relative;
+	top: 80px;
+	bottom: 0;
+	//height: 600px;
+	//height: 100%;
+	//background: $mynavy;
+	//background: $green11;
+	//background: $navy3;
+	.explore-row{
+		padding-top: 10px;
+	}
+}
+
+.explore-container .columns{
+	padding: 2px;
+}
+
+.explore-container .item{
+
+	background: $blue9;
+	// nice colors but not yet used
+	background: $red2;
+	background: $red7;
+	background: $pink2;
+	background: $navy3;
+	background: $green11;
+	background: $green13;
+	background: $green14;
+	background: $green15;
+	background: $green17;
+	background: $green18;
+	
+
+	transition: all 0.3s;
+	background: $green20;
+	background: $green22;
+	background: $blue3;
+	background: $blue15;
+	
+	
+	text-align: center;
+	padding: 10px 0;
+	margin: 0;
+
+	color: $orange7;
+	text-transform: uppercase;
+	//font-size: 0.9em;
+	line-height: 1em;
+	cursor: pointer;
+	&:hover{
+		transition: all 0.3s;
+		color: $red7;
+		//font-size: 1.05em;
+		background: $green18;
+	}
+}
+
+.explore-container{
+	.welcome-col{
+		
+	}
+
+	.welcome-note{
+		font-weight: 300;
+		margin: 0;
+		padding: 0;
+		
+		color: $orange7;
+	}
+	.icon{
+		display: block;
+	}
+	[class^="fi-"], [class*=" fi-"] {
+		line-height: 1em;
+		font-weight: 100;
+		
+	}
+	span.item-text{
+		display: block;
+		margin-top: 4px;
+		
+	}
+	
+}
+
+
+@media #{$small-only} {
+	.explore-container{
+		.welcome-note{
+			margin-left: -10px;
+			font-size: 1em;
+		}
+		.explore-row{
+			padding-top: 10px;
+		}
+	}
+
+	.explore-container .item{
+		height: 90px;
+		font-size: 0.9em;
+	}
+
+	.explore-container{
+		.icon{
+			font-size: 3.6em;
+		}
+
+		span.item-text{
+			font-size: 0.75em;
+		}
+	}
+}
+@media #{$medium-up} {
+	.explore-container{
+			.welcome-note{
+				font-size: 1.4em;
+				margin-left: -15px;
+			}
+			position: relative;
+			height: 350px;
+			top: 150px;
+			//transform: translateY(-170px);
+
+	}
+	.explore-container .item{
+		height: 140px;
+	}
+
+	.explore-container{
+		.icon{
+			font-size: 5.1em;
+		}
+
+		span.item-text{
+			font-size: 0.95em;
+		}
+	}
+}
+@media #{$medium-up} {
+
+}
+
+
+

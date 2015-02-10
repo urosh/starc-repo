@@ -10,7 +10,7 @@
 		return {
 			register: register, 
 			login: login,
-			logut: logut,
+			logout: logout,
 			getUser: getUser
 		};
 	//	var API_URL = 'http://localhost:8000/api';
@@ -32,7 +32,7 @@
 			});
 		}
 
-		function logut() {
+		function logout() {
 			AuthTokenFactory.setToken();
 		}
 
@@ -48,4 +48,4 @@
 	}
 
 
-})()
+})();

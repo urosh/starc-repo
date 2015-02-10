@@ -1,4 +1,6 @@
 'use strict';
 
-angular.module('app.authentication', []);
+angular.module('app.authentication', [])
+	
+;
 

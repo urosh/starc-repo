@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/foundation.css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Neuton|Lora|PT+Sans|PT+Sans+Narrow|PT+Serif|Inconsolata|Play|Open+Sans|PT+Sans+Caption|Raleway+Dots|Roboto:400,400italic,700,300&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Neuton|Lora|PT+Sans|PT+Sans+Narrow|PT+Serif|Play|Open+Sans|PT+Sans+Caption|Raleway+Dots|Roboto:400,400italic,700,300&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
     <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/foundation-icons/foundation-icons.css" />
@@ -26,7 +28,11 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-      <div ui-view class="main-container"></div>
+      <div >
+        <div ui-view="topbar"></div>
+        <div ui-view="sidemenu"></div>
+        <div ui-view="content"></div>
+      </div>
 
     
 
@@ -66,7 +72,9 @@
     <!-- endbuild -->
         
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        
         <script src="scripts/app.js"></script>
+        <script src="scripts/authentication/authentication.module.js"></script>
         <script src="scripts/app.states.js"></script>
 
         <!-- Home  -->
@@ -74,13 +82,15 @@
         
         <!-- Authentication  -->
 
-        <script src="scripts/authentication/authentication.module.js"></script>
+        <script src="scripts/authentication/auth.interceptor.factory.js"></script>
+        
         <script src="scripts/authentication/auth.token.factory.js"></script>
         <script src="scripts/authentication/auth.factory.js"></script>
-        <script src="scripts/authentication/auth.interceptor.factory.js"></script>
         <script src="scripts/authentication/login.controller.js"></script>
-        <script src="scripts/authentication/test.controller.js"></script>
         <script src="scripts/authentication/register.controller.js"></script>
+        
+        <!-- Explore -->
+        <script src="scripts/explore/explore.module.js"></script>
 
 
         <script src="scripts/controllers/main.js"></script>

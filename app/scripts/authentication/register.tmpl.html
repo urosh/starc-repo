@@ -1,0 +1,190 @@
+
+
+<main class="register-container">
+  	
+  	<div ng-class="(vm.notificationActive) ? 'row register-cnt notification-active' : 'row register-cnt'">
+	  	
+  		<div ng-class="(vm.success) ? 'success-message' : 'success-message inactive'">
+  			<div class="medium-9 small-centered end columns">
+  				Thank you for registering to the repository. You will be notified once your account is activated. In the meantime you can <a ui-sref="explore()">explore</a> our data. 
+  			</div>
+	  		
+	  	</div>
+	  	<div class="medium-7 small-centered end columns" ng-class="(vm.success) ? 'form-out' : ''">
+	  		<form name="registerForm"
+          ng-submit="vm.register(registerForm.$valid, data)" 
+          novalidate> 
+          
+
+          <div class="row">
+          	<div class="small-12 small-centered end columns notification-column" ng-class="vm.notificationClasses[vm.notificationIndex]">
+	  					<div>{{ vm.notificationMessage }}</div>
+	  				</div>
+
+          	<div class="small-12 small-centered end columns error-columns">
+			        <div ng-messages="registerForm.username.$error" ng-if="registerForm.$submitted || registerForm.username.$touched">
+			          <div ng-message="required">Username is required</div>
+			          <div ng-message="minlength">Username should be at least 5 characters long</div>
+			        </div>
+			      </div>
+
+			      <div class="small-12 small-centered end columns input-columns">
+			      	<div class="row collapse">
+			          <div class="small-1   columns">
+			            <span class="prefix fi-torso"></span>
+			          </div>
+			          <div class="small-11 columns">
+			            <input  name="username" 
+			                      ng-model="data.username" 
+			                      placeholder="Username" 
+			                      required 
+			                      ng-required="true"
+			                      minlength="5"
+			                      type="text"/>
+			          </div>
+			        </div> 
+		      	</div>
+
+			      <div class="small-12 small-centered end columns error-columns">
+			        <div ng-messages="registerForm.password.$error"  ng-if="registerForm.$submitted || registerForm.password.$touched">
+			          <div ng-message="required">Password is required</div>
+			        </div>
+			      </div>
+			      <div class=" small-12 small-centered end columns input-columns">
+			      	<div class="row collapse">
+			          <div class="small-1  columns">
+			            <span class="prefix fi-lock"></span>
+			          </div>
+			          <div class="small-11  columns">
+			            <input  name="password" 
+			                      ng-model="data.password" 
+			                      placeholder="Password" 
+			                      required 
+			                      ng-required="true"
+			                      minlength="5"
+			                      type="password"/>
+			          </div>
+			        </div> 
+			      </div>
+
+			      <div class="small-12 small-centered end columns error-columns">
+			        <div ng-messages="registerForm.email.$error"  ng-if="registerForm.$submitted || registerForm.email.$touched">
+			          <div ng-message="required">Email is required</div>
+			          <div ng-message="email">Email format not correct</div>
+			        </div>
+			      </div>
+			      <div class=" small-12 small-centered end columns input-columns">
+			      	<div class="row collapse">
+			          <div class="small-1  columns">
+			            <span class="prefix fi-mail"></span>
+			          </div>
+			          <div class="small-11  columns">
+			            <input  name="email" 
+			                      ng-model="data.email" 
+			                      placeholder="Email" 
+			                      required 
+			                      ng-required="true"
+			                      minlength="5"
+			                      type="email"/>
+			          </div>
+			        </div> 
+		      	</div>
+		      	<div class="small-12 columns input-columns">
+		      		<button type="submit">SIGN UP</button>
+		      	
+		      	</div>
+
+
+          </div>
+		      
+		      
+
+
+
+
+	
+		      
+
+
+		      
+
+
+				</form>	
+	       
+	  	</div>
+	   
+
+
+
+
+
+
+	     <!--    <div class="row row2">
+	          <div class="medium-5 small-12 columns form-input-column">
+	            <div class="row collapse">
+	              <div class="small-12 columns error-columns">
+	                <div ng-messages="loginForm.username.$error" ng-if="loginForm.$submitted || loginForm.username.$touched">
+	                  <div ng-message="required">Username is required</div>
+	                </div>
+	              </div>
+	            </div>
+	            <div class="row collapse">
+	              <div class="small-1 medium-2  columns">
+	                <span class="prefix fi-torso"></span>
+	              </div>
+	              <div class="small-11 medium-10 columns">
+	                <input  name="username" 
+	                          ng-model="data.username" 
+	                          placeholder="Username" 
+	                          required 
+	                          ng-required="true"
+	                          minlength="5"
+	                          type="text"/>
+	              </div>
+	            </div>
+	          </div>
+
+	          <div class="medium-5 small-12 columns form-input-column">
+	            <div class="row collapse">
+	              <div class="small-12 columns error-columns ">
+	                <div ng-messages="loginForm.password.$error" ng-if="loginForm.$submitted || loginForm.password.$touched">
+	                  <div ng-message="required">Password is required</div>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div class="row collapse">
+	              <div class="small-1 medium-2 columns">
+	                <span class="prefix fi-lock"></span>
+	              </div>
+	              <div class="small-11 medium-10 columns">
+	                <input  name="password" 
+	                        ng-model="data.password" 
+	                        required 
+	                        placeholder="Password" 
+	                        type="password"/>
+	              </div>
+	            </div>
+	          
+	          </div>
+
+	          <div class="medium-2 small-12 columns form-input-column button-column">
+	            <button type="submit">LOGIN</button>
+	          </div>
+
+	          <div class="small-12 acolumn columns">
+	            <a href="#">Register here</a>
+	          </div>
+
+	        </div> -->
+
+	       
+
+	      
+	   
+			     
+	  </div>
+ 
+
+  
+</main>

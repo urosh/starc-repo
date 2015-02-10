@@ -4,9 +4,9 @@
 	angular.module('app.authentication')
 		.controller('LoginCtrl', LoginCtrl);
 
-	LoginCtrl.$inject = ['AuthFactory', '$location'];
+	LoginCtrl.$inject = ['AuthFactory', '$location', '$state'];
 
-	function LoginCtrl(AuthFactory, $location) {
+	function LoginCtrl(AuthFactory, $location, $state) {
 		var vm = this;
 		vm.login = login;
 		vm.submited = false;
@@ -21,7 +21,8 @@
 					vm.notificationActive = true;
 					vm.user = response.data.user;
 					// how do i know success, by its response, i will return 202 or whatever status ther is. 
-					vm.notificationMessage = 'Hi, ' + response.data.user.username + ' You are now logged in.';
+					//vm.notificationMessage = 'Hi, ' + response.data.user.username + ' You are now logged in.';
+					$state.go('explore');
 					//$location.path('/test');
 
 				}, errorHandler);
@@ -39,4 +40,4 @@
 
 	}
 
-})()
+})();

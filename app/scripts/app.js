@@ -18,28 +18,25 @@ angular
     'ngTouch',
     'ngMessages',
     'app.authentication',
-    'angular-jwt'
+    'angular-jwt',
+    'app.explore'
     
   ], config);
-  config.$inject = ['$httpProvider']
-  function config($httpProvider) {
-    $httpProvider.interceptors.push('AuthInterceptor');
-  }
+  
+ 
+  
+
 angular.module('starcRepoApp')
   .constant('API_URL', 'http://localhost:8000/api');
-  /*.config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'vm'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
-*/
+
+
+
+var config = ['$httpProvider', 'AuthInterceptor', function($httpProvider,AuthInterceptor ){
+  $httpProvider.interceptors.push('AuthInterceptor');
+}];
+
+config2.$inject = ['$httpProvider', 'AuthInterceptor'];
+
+function config2($httpProvider, AuthInterceptor) {
+  $httpProvider.interceptors.push('AuthInterceptor');
+}

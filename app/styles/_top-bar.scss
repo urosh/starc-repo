@@ -1,58 +1,305 @@
 .top-bar{
 	position: fixed;
 	width: 100%;
-	height: 60px;
+	
 	margin: 0;
 	padding: 0;
 	background: $mynavy;
 	z-index:10;
-	.logo,
-	.text-holder{
-		//display: inline-block;
-	}
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; /* Webkit */
+	-moz-user-select: none;    /* Firefox */
+	-ms-user-select: none;     /* IE 10  */
+	/* Currently not supported in Opera but will be soon */
+	-o-user-select: none;
+	user-select: none;  
+
+	overflow: visible;
 	
 	.logo{
-		background: url(../images/cyi-logo.png) no-repeat;
-		@include width-height(54px, 60px);
-		background-size: 54px 54px;
-		background-position: center; 
-		margin: 0;
 		float: left;
+		a{
+			display: block;
+			margin: 0;
+			float: left;
+			
+		}
 	}
 
-	.text-holder{
-		float: left;
-		position: relative;
-		padding: 0;
-		margin: 0;
-		@include width-height(191px, 60px);
-		margin-left: 5px;
+	
+
+
+
+	.user-menu{
+		ul, li {
+			margin: 0;
+			padding:  0;
+			span{
+				display: block;
+				cursor: pointer;
+				//width: 90px;
+			}
+			li:first-child{
+				padding-bottom: 5px;
+			}
+		}
+		li:hover{
+			text-decoration: underline;
+		}
+		padding: 5px 10px;
+		//height: 70px;
+		background: brown;
+		background: $blue15;
 		
-	}
-
-	h1, h3{
-		color: white;
-		font-family: 'Lato', sans-serif;
+		
+		
 		position: absolute;
-		margin: 0;
-		padding: 0;
-		left: 0;
-		width: 70px;
-		line-height: 1.1em;
-	}
-	h1{
-		font-size: 1.7em;
-		top: 7px;
-		height: 1.1em;
-	}
+		//right: 20px;
+		font-weight: 300;
+		//top: 55px;
+		//width: 175px;
 
-	h3{
-		top: 32px;
-		font-size: 1.18em;
-		font-weight: lighter;
+		&:after{
+	    content:'';
+	    width:10px;
+	    height:10px;
+	    background:brown;
+	    background: $blue15;
+		
+	    position:absolute;
+	    -moz-transform:rotate(45deg);
+	    -webkit-transform:rotate(45deg);
+	    transform:rotate(45deg);
+	    top:-4px;
+	    left:10px;
+	  } 
+	}
+	
+}
+
+
+
+@media #{$small-up} {
+	.top-bar{
+		height: 40px;
+		line-height: 40px;
+	
+		.logo{
+			
+			padding: 0 4px;
+			margin: 0;
+			
+	
+			a{
+				display: block;
+				width: 34px;
+				height: 34px;
+				margin: 0;
+				padding: 0;
+				img{
+					width: 38px;
+					height: 35px;
+				}
+			
+			}
+		}
+
+
+
+		.text-holder{
+			float: left;
+			position: relative;
+			padding: 0;
+			margin: 0;
+			@include width-height(71px, 40px);
+			
+		}
+
+		h1, h3{
+			color: white;
+			font-family: 'Lato', sans-serif;
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			left: 0;
+			width: 70px;
+			line-height: 1.1em;
+		}
+		h1{
+			font-size: 1.3em;
+			top: 4px;
+			height: 1.1em;
+		}
+
+		h3{
+			top: 22px;
+			font-size: 0.9em;
+			font-weight: lighter;
+		}	
+		.user-info{
+			right: 35px;
+			top: 8px;
+			padding: 0;
+			position: absolute;
+			font-weight: 300;
+			cursor: pointer;
+			width: 120px;
+			
+			div{
+				height: 24px;
+				float: left;
+				padding: 0;
+
+			}
+			.user-icon{
+				width: 24px;
+				line-height: 24px;
+				text-align: center;
+				span{
+					border-radius: 12px;
+					display: block;
+					height: 24px;
+					background: $orange7;
+					padding: 0;
+					transition: all 0.3s;
+					&:hover{
+						transition: all 0.3s;
+						background: darken($orange7, 15%)
+					}
+				}
+			
+			}
+			.user-name{
+				line-height: 24px;
+				font-size: 12px;
+				margin-left: 4px;
+				&:hover{
+					text-decoration: underline;
+					
+				}
+			}
+
+			.login-signup{
+				line-height: 24px;
+				margin-left: 4px;
+				font-size: 12px;
+				span{
+					
+				}
+				span:hover{
+					text-decoration: underline;
+					
+				}
+			}
+
+
+
+
+		}
+
+		.user-menu{
+			ul, li {
+				span{
+				//	width: 70px;
+					font-size: 0.8em;
+
+				}
+			}
+			right: 43px;
+			top: 40px;
+			width: 115px;
+			&:after{
+		    content:'';
+		    width:10px;
+		    height:10px;
+		  
+		    position:absolute;
+		    -moz-transform:rotate(45deg);
+		    -webkit-transform:rotate(45deg);
+		    transform:rotate(45deg);
+		    top:-4px;
+		    left:10px;
+		  } 
+		}
+
+
+
+
 	}
 
 }
+
+@media #{$medium-up}{
+	.top-bar{
+		height: 50px;
+		.logo{
+			//width: 52px;
+			//height: 52px;
+			padding: 4px 2px;
+	
+			a{
+				width: 43px;
+				height: 43px;
+				img{
+					width: 43px;
+					height: 43px;
+				//	margin-top: -4px;
+				}
+			
+			}
+		}
+
+		h1{
+			font-size: 1.6em;
+			top: 3px;
+			height: 1.1em;
+		}
+
+		h3{
+			top: 25px;
+			font-size: 1.1em;
+			font-weight: lighter;
+		}
+
+		.user-info{
+			right: 60px;
+			top: 12px;
+			width: 170px;
+			.user-name{
+				font-size: 14px;
+			}
+
+			.login-signup{
+				font-size: 14px;
+			}
+
+
+		}
+
+		.user-menu{
+			ul, li {
+				span{
+				//	width: 70px;
+					font-size: 0.9em;
+
+				}
+			}
+			right: 112px;
+			top: 45px;
+			width: 125px;
+			&:after{
+		    left:15px;
+		  } 
+		}
+
+
+
+	
+
+
+	}
+}
+
 
 
 

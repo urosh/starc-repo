@@ -13,24 +13,51 @@
 		$stateProvider
 			.state('home', {
 				url: '/',
-				templateUrl: 'scripts/home/home.html',
-				controller: 'HomeCtrl as vm'
+				views: {
+					'topbar@': {
+						controller: 'TopBarCtrl as vm',
+						templateUrl: 'scripts/home/topbar.tmpl.html',
+					},
+					'sidemenu@': {
+						controller: 'HomeCtrl as vm',
+						templateUrl: 'scripts/home/sidemenu.tmpl.html',
+					},
+					'content@': {
+						templateUrl: 'scripts/home/home.tmpl.html',
+					}
+				}
+				
+				
 			})
 			.state('login', {
 				url: '/login',
-				templateUrl: 'scripts/authentication/login.html',
-        controller: 'LoginCtrl as vm'
+				views: {
+					'topbar@': {
+						templateUrl: 'scripts/home/topbar.tmpl.html',
+					},
+			
+					'content@': {
+						controller: 'LoginCtrl as vm',
+						templateUrl: 'scripts/authentication/login.tmpl.html',
+					}
+				}
+				
+        
 			})
 			.state('register', {
 				url: '/register',
-				templateUrl: 'scripts/authentication/register.html',
-        controller: 'RegisterCtrl as vm'
-			})
-			.state('test', {
-				url: '/test',
-				templateUrl: 'scripts/authentication/test.html',
-        controller: 'TestCtrl as vm'
-			})
+				views: {
+					'topbar@': {
+						templateUrl: 'scripts/home/topbar.tmpl.html',
+					},
+			
+					'content@': {
+						controller: 'RegisterCtrl as vm',
+						templateUrl: 'scripts/authentication/register.tmpl.html',
+					}
+				}
+			});
+			
 
 	}	
 })();

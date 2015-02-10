@@ -1,9 +1,5 @@
 $form-dim: 35px;
 
-
-
-
-
 .login-container{
 	position: relative;
 	overflow: auto;
@@ -20,59 +16,44 @@ $form-dim: 35px;
 	perspective: 1000px;
 	
 }
+.main-login-container{
+	position: fixed; 
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 
-
-.login-cnt .error{
-	width: 260px;
-	color: $gold;
-	color: black;
-	//color: $links_yellow;
-	//color: $red3;
-	font-size: 0.8em;
-	display: inline-block;
-}
-
-.login-cnt .error-messages{
-	height: 1.4em;
+	background: red;
 }
 
 
-.login-cnt a{
-	color: $light_gray;
-	&:hover{
-		color: $another_grey;
-	}
-}
-@media #{$small-only}{
-	.login-cnt .form-input-column{
-		padding: 0;
-		margin: 0;
-		margin-bottom: 5px;
-	}
-	
-	.login-cnt{
-		position: relative;
-		//top: 200px;
-		//height: 150px;
+.login-cnt{
 		position: relative;
 		top: 50%;
 		height: 315px;
-		//transform: translateY(-50%);
 		transform: translateY(-170px);
 		a{
 			font-size: 0.85em;
 		}
 		
-	}
+}
 
-	.login-cnt button{
-		width: 100%;
-	}
-
+.login-cnt a{
 	
-	.login-cnt .button-column{
-		
-		margin: 15px 0 0 0;
+	color: $another_grey;
+	&:hover{
+		color: $another_grey;
+		text-decoration: underline;
+	}
+}
+
+
+
+@media #{$small-only}{
+	.login-cnt .form-input-column{
+		padding: 0;
+		margin: 0;
+		margin-bottom: 5px;
 	}
 
 	.login-cnt .notification{
@@ -85,11 +66,21 @@ $form-dim: 35px;
 		}
 	}
 
-	
+	.login-cnt span.prefix{
+		font-size: 1em;
+		padding-left: 7px;
+	}
+	.login-cnt button{
+		width: 100%;
+	}
+
+	.login-cnt .button-column{
+		margin: 15px 0 0 0;
+	}
+
 }
 
 @media #{$small-up} { 
-
 	.login-cnt .notification{
 		padding: 0;
 		transform: rotateX(-90deg);
@@ -107,9 +98,34 @@ $form-dim: 35px;
 			font-weight: 300;
 		}
 	}
-
-
-
+	
+	.login-cnt span.prefix{
+		color: $mynavy;
+		text-align: center;
+		height: $form-dim;
+		line-height: $form-dim;
+		border: none;
+		background: #fff;
+	}
+	.login-cnt .acolumn{
+		padding: 0 ;
+		margin: 0;
+	}
+	.login-cnt input{
+		height: $form-dim;
+		border: none;
+		box-shadow: none;
+		font-size: 0.9em;
+		font-weight: lighter;
+		background: #fff;
+		color: $typo_grey;
+		margin: 0;
+	}
+	.login-cnt .error-columns{
+		height: 20px;
+		color: $gold;
+		font-size: 0.8em;
+	}
 	.login-cnt button{
 		height: $form-dim;
 		line-height: $form-dim;
@@ -122,46 +138,7 @@ $form-dim: 35px;
 		width: 100%;
 	}
 
-	.login-cnt span.prefix{
-		font-size: 1.2em;
-		color: $mynavy;
-		text-align: center;
-		height: $form-dim;
-		line-height: $form-dim;
-		border: none;
-		background: #fff;
-	}
-
-	.login-cnt input{
-		height: $form-dim;
-		border: none;
-		box-shadow: none;
-		font-size: 0.9em;
-		font-weight: lighter;
-		background: #fff;
-		color: $typo_grey;
-		margin: 0;
-	}
-
-	.login-cnt .prefix{
-		font-size: 0.8em;
-		padding-left: 7px;
-	}
-
-	
-	.login-cnt .acolumn{
-		padding: 0 ;
-		margin: 0;
-	}
-
-	.login-cnt .error-columns{
-		height: 1.62em;
-		color: $gold;
-		font-size: 0.8em;
-	}
-
 }
-
 
 @media #{$medium-up} {
 	.login-cnt .notification{
@@ -170,28 +147,20 @@ $form-dim: 35px;
 			padding: 10px;
 			height: 50px;
 		}
-
-
 	}
+
 	.login-cnt{
-		position: relative;
-		top: 50%;
 		height: 165px;
-		//transform: translateY(-50%);
 		transform: translateY(-130px);
 		span.prefix{
 			font-size: 1.2em;
 		}
-		
 		input[type="password"]{
 			border-radius: 0 3px 3px 0;	
 		}
 		.acolumn{
 			padding: 0 5px ;
 			margin: 0;
-		}
-		.row1 .columns{
-			padding: 0 5px;
 		}
 		.fi-torso{
 			border-color: #fff;
@@ -200,24 +169,18 @@ $form-dim: 35px;
 		.form-input-column{
 			padding: 0 3px;
 		}
-		.button-column{
-			margin-top: 1.3em;;
-		}
 		
-
-	}
-	
-
+		.button-column{
+			margin-top: 20px;
+		}
+	}	
 }
-
-
 
 @media #{$large-up} {
 	.login-cnt span.prefix{
 		padding: 0 10px;
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 }
-
 
 

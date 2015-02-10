@@ -1,0 +1,29 @@
+<div class="menu-btn-container">
+      
+  <div class="btn-cnt"> 
+    <a  ng-class="(vm.buttonActive) ? 'menu-btn active' : 'menu-btn'" ng-click="vm.buttonClicked()">
+      <span>Menu</span>
+    </a>
+
+  </div>
+  
+</div>
+<nav  ng-class="(vm.buttonActive) ? 'side-menu active' : 'side-menu'">
+  
+  <ul>
+    <li><div class='icon-div'><span href="#" class="icon-explore"></span></div><div class='menu-text-div'><a href="login.html">Explore data</a></div></li>
+    <li><div class='icon-div'><span href="#" class="icon-reconstruction"></span></div class='menu-text-div'><div><a href="login.html">3D reconstruction</a></div></li>
+    
+    <li><div class='icon-div'><span href="#" class="icon-virtual_museum"></span></div class='menu-text-div'><div><a href="login.html">Virtual museums</a></div></li>
+    <li><div class='icon-div'><span href="#" class="icon-document"></span></div><div class='menu-text-div'><a href="login.html">Documentation</a></div></li>
+    <!-- <li><div><span href="#" class="icon-dlibrary"></span></div><div><a href="login.html">Digital libraries</a></div></li> -->
+    <li><div class='icon-div'><span href="#" class="icon-dlibrary"></span></div><div class='menu-text-div'><a href="login.html">Digital libraries</a></div></li>
+    <li><div class='icon-div'><span href="#" class="icon-collaboration"></span></div class='menu-text-div'><div><a href="login.html">Collaborations</a></div></li>
+    <li><div class='icon-div'><span href="#" class="icon-tools"></span></div><div class='menu-text-div'><a href="login.html">Equipment</a></div></li>
+    <!-- <span class="border"></span>
+<span class="border"></span>
+-->
+    
+   
+  </ul>
+</nav>
