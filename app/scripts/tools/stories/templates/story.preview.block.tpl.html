@@ -1,0 +1,12 @@
+
+<div class="preview-block">
+ <div class="title-block" ng-show="data.type === 'title'">
+   <h3>{{data.title}}</h3>
+ </div>
+ <div ng-show="data.type === 'text'" class="paragraph-block">
+   <p>{{data.content}}</p>
+ </div>
+  <div class="object-block" ng-show="data.type === 'object'">
+    <img ng-repeat="item in data.content" ng-src="{{item.imageLocation}}" height="60px">
+  </div>
+</div>

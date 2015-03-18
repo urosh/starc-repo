@@ -1,0 +1,203 @@
+.stories-container{
+  overflow: auto;
+  overflow-y: hidden;
+  color: #2d3956;
+  min-height: 450px;
+  background-color: #e7e7e7;
+  padding: 5px;
+  margin-bottom: 3px;
+  
+
+ .story-publish-button{
+    width: 80px;
+    height: 28px;
+    display: block;
+
+    background-color: transparent;
+    border: solid 1px $oil;
+    color: $oil;
+    margin: 0px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 26px;
+    transition: all 0.2s;
+    &:hover{
+    transition: all 0.2s;
+      color: lighten($oil, 25%);
+      border: solid 1px lighten($oil, 25%);
+    }
+  }
+
+
+  h3{
+    padding: 0 0 2px;
+    margin: 0;
+    width: 190px;
+    font-size: 18px;
+  }
+
+  .story-block {
+    min-height: 40px;
+    overflow: auto;
+    margin-top: 2px;
+    //background-color: #C5C5C5;
+    cursor: pointer;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+
+  }
+  .story-block-menu{
+    margin: 2px;
+    line-height: 20px;
+    height: 20px;
+  }
+
+  .story-block .icon-holder{
+
+    background-color: $mynavy;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 2px;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: white;
+    float: left;
+    &:hover{
+      background-color:$orange7;
+    }
+    &.active{
+       background-color:$orange7; 
+    }
+  }
+
+  .block-description{
+    line-height: 20px;
+    font-size: 16px;
+    display: block;
+    float: left;
+  } 
+
+  
+  .object-container{
+    min-height: 80px;
+    margin-left: 2px;
+    font-size: 14px;
+   
+    overflow: auto;
+  }
+
+  .object-container .selected-objects{
+    min-height: 60px;
+    overflow: auto;
+    float: left;
+    margin-right: 2px;
+    .image-container{
+      overflow: auto;
+      img{
+        height: 60px !important;
+      }
+    }
+  }
+  .selected-container{
+    display: inline-block;
+    margin-right: 5px;
+    text-align: center;
+    position: relative;
+
+  }
+  .selected-container .label{
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    font-size: 12px;
+    line-height: 14px;
+    overflow:hidden;
+  
+  }
+
+
+  .selected-container .remove-button{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    
+    padding: 0;
+    background-color: white;
+  }
+  
+
+
+
+
+  .on-drag-enter{
+
+    background-color: #737373;
+  }
+  .text-container{
+    margin-left: 2px;
+  }
+  
+  .title-container input[type="text"]{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+  }
+  .text-container textarea{
+    min-height: 180px;
+    overflow:  auto;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+  }
+
+  .title-container{
+  //  height: 46px;
+  }
+
+ .tab-container{
+    height: 28px;
+  }
+
+  .tab-container .tab{
+    width: 65px;
+    display: inline-block;
+    background-color: #2d3956;
+    color: white;
+   /* font-weight: bold;*/
+    text-align: center;
+    margin-right: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 22px;
+    transition: all 0.2s;
+  }
+  .tab-container .tab-footer{
+    height: 4px;
+    background-color: #66718b;
+    background-color: red;
+    margin-bottom: 0;
+  }
+  .tab:hover{
+    background-color:$orange7;
+    transition: all 0.2s;
+  }
+
+  .tab.active{
+    background-color:$orange7;
+  }
+
+}

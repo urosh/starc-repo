@@ -1,0 +1,31 @@
+<div>
+  
+  <div class="search-input-div">
+    <input ondragstart="return false;" ondrop="return false;" type="search" ng-model="vm.query.input" ng-change="vm.change(vm.query)" >
+    <button  ng-click="vm.search()"  class="searchButton">SEARCH</button>
+
+  </div>
+  <div class="advanced-search-button-div">
+    <span class="advanced-search-link">
+      <a href="" ng-click="vm.search.advanced=!vm.search.advanced">Advanced Search</a>
+    </span>
+
+  </div>
+  <div  ng-show="vm.search.advanced"   ng-class="{'advanced-search-container': !searchCtrl.init22}">
+  <!-- <div ng-show="ctrl.model.advanced" class="advanced-search-container ng-hide"> -->
+    <div>
+      <section class="collections">
+        <h4>Choose collection</h4>
+        <span ng-class="(active) ? 'active' : ''"  ng-click="vm.collectionSelected(coll);active=!active" ng-repeat="coll in vm.collections">{{coll}}</span>
+
+      </section>
+
+      <section class="types">
+        <h4>Choose object type</h4>
+        <span ng-class="(active) ? 'active' : ''"  ng-click="vm.typeSelected(type.type);active=!active" ng-repeat="type in vm.types">{{type.title}}</span>
+
+      </section>
+      <!-- <a href="#" ng-click="vm.search('browse')" class="searchButton browse">BROWSE</a> -->
+    </div>
+  </div>
+</div>

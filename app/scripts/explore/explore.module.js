@@ -2,46 +2,50 @@
 	'use strict';
 
 	angular.module('app.explore', []);
-
+	
 	angular.module('app.explore')
-		.config(ExploreState)
-		.controller('MenuController', MenuController);
+	  .constant('tools', {
+	    'apps': [ 
+	      {
+	        'name': 'search',
+	        'template': 'to be defined',
+	        'code': 'sr'
+	      },
+	      {
+	        'name': 'map',
+	        'template': 'map template',
+	        'code': 'mp'
+	      },
+	      {
+	        'name': 'annotations',
+	        'template': 'annotations template',
+	        'code': 'an'
+	      },
+	      {
+	        'name': 'collections',
+	        'template': 'collections template',
+	        'code': 'cl'
+	      },
+	      {
+	        'name': 'statistics',
+	        'template': 'statistics template',
+	        'code': 'st'
+	      },
+	      {
+	        'name': 'visualizations',
+	        'template': 'visualizations template',
+	        'code': 'vs'
+	      },
+	      {
+	        'name': 'stories',
+	        'template': 'stories template',
+	        'code': 'sr'
+	      }
 
-	ExploreState.$inject = ['$stateProvider'];
-	function ExploreState($stateProvider) {
-
-		$stateProvider
-			.state('explore', {
-				url: '/explore',
-				views: {
-					'topbar@': {
-						controller: 'TopBarCtrl as vm',
-						templateUrl: 'scripts/home/topbar.tmpl.html',
-					},
-					/*'sidemenu@': {
-						controller: 'HomeCtrl as vm',
-						templateUrl: 'scripts/home/sidemenu.tmpl.html',
-					},*/
-					'content@': {
-						templateUrl: 'scripts/explore/explore.tmpl.html',
-					}
-				}
-			})
-
-
-		
-	}
-	MenuController.$inject = ['$scope'];
-
-	function MenuController($scope) {
-		var vm = this;
-	  vm.buttonActive = false;
-	  vm.buttonClicked = buttonClicked;
-
-	  function buttonClicked() {
-	  	vm.buttonActive = !vm.buttonActive;
-	  }
-	}
+	    ],
+	    'urls' : '/dash?sr&mp'
+	    
+	  });
 
 
 })();

@@ -1,0 +1,20 @@
+<div  class="stories-container" >
+  <h3>Create story</h3>
+  <starc-tabs></starc-tabs>
+
+    <div ng-show="vm.createMode" class="stories-block-container">
+      <starc-stories-block  ng-repeat="block in vm.blocks" index="$index" drop="block.active"   type="block.type">
+
+      </starc-stories-block>
+    </div>
+    <div ng-show="!vm.createMode" class="preview-container">
+      <starc-story-preview data="vm.stories"></starc-story-preview>
+    </div>
+
+
+  <a href="" ng-click="vm.publish()"  class="story-publish-button">Publish</a>
+</div>
+
+
+
+

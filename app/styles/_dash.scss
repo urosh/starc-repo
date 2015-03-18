@@ -1,0 +1,23 @@
+.dashboard-container{
+	position: relative;
+	top: 80px;
+	color: white;
+	font-weight: 300;
+
+	
+	.dash-row{
+		
+		margin-bottom: 20px;
+	}
+	.search-col{
+		//background: $oil;
+		// think about this oil color, its good.
+		padding: 0;
+	}
+	.tools-col{
+		//background: brown;
+		padding: 0 0 0 15px;
+	}
+
+	
+}

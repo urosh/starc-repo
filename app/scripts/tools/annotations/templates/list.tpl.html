@@ -1,0 +1,19 @@
+<div class="annotations-list-container">
+  <div>
+  <img ng-src="{{imageSource}}" width="350" />
+    <div>
+      <span ng-click="selectAnnotation(item)" ng-repeat="item in list" ng-style="{top: {{ item.center.top }} + 'px', left: {{ item.center.left }} + 'px'}"></span>
+
+    </div>
+
+    <div class="annotation-marker" ng-show="annotationSelected"></div>
+  </div>
+
+
+  <div class="annotation-list-description"  ng-show="annotationSelected">
+       <p>Annotation title</p>
+      {{title}}
+      <p>Annotation text</p>
+      {{description}}
+  </div>
+</div>

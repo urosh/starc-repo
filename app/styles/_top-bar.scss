@@ -5,6 +5,7 @@
 	margin: 0;
 	padding: 0;
 	background: $mynavy;
+	background: $oil;
 	z-index:10;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; /* Webkit */
@@ -24,6 +25,19 @@
 			float: left;
 			
 		}
+	}
+
+	.vmust-logo{
+		float: left;
+		a{
+			display: block;
+			margin: 0;
+			float: left;
+			
+	
+
+		}
+		background: white;
 	}
 
 	
@@ -111,9 +125,12 @@
 			position: relative;
 			padding: 0;
 			margin: 0;
-			@include width-height(71px, 40px);
+			margin-right: 5px;
+			@include width-height(91px, 40px);
 			
 		}
+
+
 
 		h1, h3{
 			color: white;
@@ -136,6 +153,20 @@
 			font-size: 0.9em;
 			font-weight: lighter;
 		}	
+
+		.text-holder.vmust{
+				@include width-height(91px, 50px);
+				h1{
+					width: 90px;
+					height: 40px;
+					line-height: 40px;
+					padding: 0;
+					margin: 0;
+					font-family: 'Old Standard TT', serif;
+				}
+				margin-left: 5px;
+		}
+
 		.user-info{
 			right: 35px;
 			top: 8px;

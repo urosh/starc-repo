@@ -1,0 +1,36 @@
+<div class='statistics-container'>
+	<starc-preloader active="vm.active" class="stat-preloader"></starc-preloader>
+		<div class="statistics-content" ng-show="!vm.active">
+			<h3>Repository statistics</h3>
+
+			<div ng-show="vm.statActive">
+				<p>Number of objects: <span class="val">{{ vm.stats.numberOfObjects }}</span></p>
+				<p>Object types</p>
+				<ul class="types">
+					<li ng-repeat="type in vm.stats.types" ng-click="vm.search('types', type.type)">
+						<span ng-class="{selected: type.selected}">{{type.type}}</span> <a href="" >{{type.number}}</a>
+					</li>
+					
+					
+				</ul>
+				<p>Data collections</p>
+				<ul class="data-collections-list">
+					<li ng-repeat="collection in vm.stats.collections">
+						<span>{{collection.collection}} (<a ng-click="vm.search('collections', collection.collection)" href="">{{collection.number}}</a>)</span>
+					</li>	
+				</ul>
+				<p>Personal collections</p>
+				<ul class="data-collections-list">
+					<li ng-repeat="collection in vm.stats.personal">
+						<span>{{collection.name}} (<a href="">{{collection.number}}</a>)</span>
+					</li>	
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+	
+
+</div>

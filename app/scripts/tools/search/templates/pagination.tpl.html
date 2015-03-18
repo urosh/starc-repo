@@ -1,0 +1,20 @@
+<div class="pagination-container">
+	<div ng-show="vm.perShow" class="items-per-page">
+		<span>Items per page</span>
+		<ul>
+			<li ng-repeat="num in vm.perPageNumbers" ng-class="{open: vm.itemsPerPage === num}"><a href="" ng-click="vm.perPage(num)" class="items-per-page-link">{{num}}</a></li>
+			
+		</ul>
+	</div>
+	<div ng-show="vm.pagShow" class="pagination">
+		<ul>
+			<li ng-show="vm.firstShow"><a  ng-click="vm.firstPage()" href="">First</a></li>
+			<li ng-show="vm.prevShow"><a href=""  ng-click="vm.prevPage()">Prev</a></li>
+			<li ng-repeat="num in vm.paginationNumbers"  ><a href="" ng-class="{active:  num == vm.currentPage}" ng-click="vm.itemPage(num)">{{num}}</a></li>
+			<li ng-show="vm.nextShow"><a href=""  ng-click="vm.nextPage()">Next</a></li>
+			<li ng-show="vm.lastShow"><a href=""  ng-click="vm.lastPage()">Last</a></li>
+			
+			
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,58 @@
+.facets-container{
+	min-height: 16px;
+	overflow: auto;
+	position: relative;
+	margin-bottom: 8px;
+	color: white;
+	font-weight: 300;
+	font-size: 14px;
+
+	.collections{
+		float: left;
+		width: 70%;
+	}
+
+	.types{
+		float: right;
+		width: 30%;
+	}
+
+	p{
+		//font-weight: bold;
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+		color: $orange7;
+		font-weight: 300;
+	}
+
+	span{
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-tap-highlight-color:transparent;
+		margin: 4px 4px 0 0;
+		display: inline-block;
+		height: 20px;
+		line-height: 20px;
+		padding: 0 4px 0 4px;
+		background-color: $light-blue;
+		color: white;
+		cursor: pointer;
+		&:hover{
+			background-color: darken($light_blue, 10%);
+		}
+
+		&.selected{
+			background-color: $orange7;
+			//color: #66718b;
+		}
+	
+
+	}
+
+
+}

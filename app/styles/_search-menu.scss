@@ -1,0 +1,50 @@
+.search-menu{
+	height: 110px;
+	padding: 0;
+	ul{
+		padding: 0;
+		margin: 10px 0 0 0 ;
+		display: inline-block;
+
+	}
+
+	ul li{
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		margin: 0 5px 0 0;
+		background: $light-blue;
+		clear: both;
+		&:hover{
+			cursor: pointer;
+			transition: all 0.3s;
+			color: $orange7;
+		}
+		&.active{
+			//border: solid 2px $orange7;
+			background: darken($light-blue, 10%);
+			color: $orange7;
+		}
+		
+		span{
+			
+			width: 60px;
+			height: 20px;
+			font-size: 10px;
+			float: left;
+			clear: left;
+			text-align: center;
+		}
+
+		[class*="fi-"]{
+			display: inline-block;
+			font-weight: 300;
+			width: 60px;
+			height: 40px;
+
+			line-height: 34px;
+			padding-top: 4px;
+			font-size: 34px;
+		}
+	}
+}

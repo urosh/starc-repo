@@ -1,0 +1,20 @@
+<div class="annotation-container">
+	<h3>Annotate Object</h3>
+	<p ng-show="!vm.objectLoaded">Please select object</p>
+  <div ng-show="vm.objectLoaded" class="annotation-menu">
+
+    <span ng-class="(vm.annotateMode) ? 'my-icon fi-annotate active' : 'my-icon fi-annotate'" title="Annotate object" ng-click="vm.changeMode(true)"></span>
+    <span ng-class="(!vm.annotateMode) ? 'my-icon fi-list-thumbnails active' : 'my-icon fi-list-thumbnails'" title="Show available annotations" ng-click="vm.changeMode(false)"></span>
+  </div>
+	<starc-crop imsource="vm.imageSource" imageh="vm.imageh" ng-show="vm.annotateMode"></starc-crop>
+  <starc-list-annotations imsource="vm.imageSource" imageh="vm.imageh" docid="vm.docID" list="vm.annotationsList" ng-show="!vm.annotateMode"></starc-list-annotations>
+	<div ng-show="vm.objectLoaded && vm.annotateMode" class="annotation-form">
+		<starc-dialog ng-show="vm.dialogActive"  type="vm.dialogType" text="vm.dialogText" ></starc-dialog>
+		<p>Annotation title</p>
+		<input ng-model="vm.annotation.title" type="text">
+		<p>Annotation description</p>
+		<textarea  ng-model="vm.annotation.text" ></textarea>
+		<a href=""  ng-click="vm.saveAnnotation()" class="button">Save</a>
+
+	</div>
+</div>

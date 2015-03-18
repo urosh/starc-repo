@@ -1,0 +1,11 @@
+<div ng-show="vm.active" class="facets-container">
+	<div class="collections">
+		<p>Collections</p>
+		<span ng-click="vm.filterFacet('collections', $index)" ng-class="{selected: collection.selected}" ng-repeat="collection in vm.collections">{{collection.name}}</span>
+		
+	</div>
+	<div class="types">
+		<p>Object types</p>
+		<span ng-click="vm.filterFacet('types', $index)" ng-class="{selected: type.selected}" ng-repeat="type in vm.types">{{type.name}}</span>
+	</div>
+</div>

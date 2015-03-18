@@ -1,0 +1,335 @@
+@media #{$small-up} {
+	
+	$form-height: 30px;
+	
+	input[type="search"] {
+		width: 300px;
+		height: $form-height;
+		border: 0;
+		font-size: 1em;
+		//font-weight: bold;
+		font-weight: 500;
+
+		&:focus {
+    	outline: 0;
+    	box-shadow:none;
+    	border: 0;
+    	//background: red;
+		}
+	}
+
+	.searchButton{
+	 	display: inline-block;
+	  width: 80px;
+	  height: $form-height;
+	  background-color: $light_blue;
+	  margin: 0px;
+	  text-align: center;
+	  text-decoration: none;
+	  color: white;
+	  padding: 0px;
+	  font-size: 16px;
+	  //line-height: $form-height;
+	  font-weight: 300;
+	  letter-spacing: 1px;
+	  &:focus {
+    	outline: 0;
+    	box-shadow:none;
+    	//border: 0;
+    	background: #66718b;
+		}
+  	&:hover{
+  		background: darken($light_blue, 10%);
+  	}
+   
+	}
+
+}
+
+
+.advanced-search-container{
+	padding: 0;
+	display: block;
+	overflow: auto;
+	overflow-y:	hidden;
+  -webkit-transition: all 0.3s;
+  //opacity:1;
+  height: 250px;
+  h4{
+  	font-size: 1em;
+  	color: white;
+  	font-weight: 300;
+  }
+  span{
+  	display: inline-block;
+    padding: 3px;
+    margin-bottom: 2px;
+    background-color: $light_blue;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 4px;
+    font-weight: 300;
+    &.active{
+    	background-color: $orange7;
+    	color: $mynavy;
+    	&:hover{
+    		background-color: $orange7;
+    		color: $mynavy;
+    		
+    	}
+    }
+    &:hover{
+    	background-color: darken($light_blue, 10%);
+    	color: white;
+    }
+  }
+
+}
+
+.advanced-search-container.ng-hide {
+  //opacity:0;
+  height: 0;
+  -webkit-transition: all 0.3s;
+}
+
+
+.search-results{
+	margin-top: 15px;
+}
+.search-history{
+	//min-height: 16px;
+  //overflow: auto;
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 14px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  .indicators-container{
+  	position: absolute;
+  	top: 3px;
+	  left: 90px;
+	  display: inline-block;
+	}
+	.indicator{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    border: solid 2px $light_blue;
+    border: solid 2px $orange7;
+    background-color: white;
+    margin-right: 2px;
+    //top: 2px;
+    cursor: pointer;
+	}
+
+	.label{
+    display: inline-block;
+    line-height: 16px;
+  	top: 0px;
+  	color: white;
+  	color: $orange7;
+  	font-weight: 300;
+	}
+
+	.active{
+    background-color: $orange7;
+    //background-color: $light_blue;
+
+	}
+
+
+}
+
+
+/*
+	Results layout
+*/
+
+
+.deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '5 .column.column-1-5';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+
+}
+.deckgrid{ 
+	//height: 0;
+}
+
+
+.deckgrid .column {
+  float: left;
+  //margin-top: -10px;
+
+}
+
+.deckgrid .column-1-5 {
+  width: 20%;
+  //border: solid 1px red;
+  padding: 2px;
+  margin-top: -4px;
+  //margin: 0 3px 3px 0;
+
+}
+
+.deckgrid{
+	[class*="column-1-"] + [class*="column-1-"]:last-child {
+	float: left;
+	}
+}
+
+
+
+.a-card{
+	
+	background-color: #66718b;
+	padding: 3px;
+	margin-bottom: 3px;
+	border-radius: 2px;
+	color: white;
+	cursor: pointer;
+	position: relative;
+
+}
+.a-card h4{
+	font-weight: normal;
+	margin: 2px 0;
+	font-size: 12px;
+	color: white;
+}
+
+
+.a-card .tools-icons{
+	height: 14px;	
+//	margin: 2px 0;
+}
+
+.a-card .tools-icons span{
+	float: right;
+	display: inline-block;
+	background-color: #fff;
+	margin-left: 2px;
+	color: $light_blue;
+	width: 14px;
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: center;
+}
+.tools-icons span:hover{
+	background-color: #ddd;
+}
+
+.a-card .icon-add:hover:before {
+	color: #2d3956;
+		font-size: 10px;
+
+}
+
+.a-card .icon-add:before {
+	content: "\e63b";
+		font-size: 10px;
+}
+
+.a-card .tools-icons .icon-story{
+    padding: 1px 4px 2px 4px;
+}
+.a-card .icon-story:before {
+	content: "S";
+    font-weight: bold;
+		font-size: 11px;
+}
+.a-card .icon-story:hover:before{
+    color: #2d3956;
+    font-size: 11px;
+}
+
+.a-card .icon-annotate:hover:before{
+	color: #2d3956;
+		font-size: 10px;
+}
+.a-card .icon-annotate:before{
+	content: "\e600";
+	font-size: 10px;
+
+}
+
+
+
+
+@media #{$medium-up} {
+
+	$form-height: 35px;
+	.search-input-div{
+		margin: 0;
+		clear: both;
+		overflow: hidden;
+		height: $form-height;
+	}
+	input[type="search"] {
+		width: 350px;
+		height: $form-height;
+		font-size: 16px;
+		display: inline-block;
+		float: left;
+		margin-right: 5px;
+		
+		padding: 0 5px;
+
+		
+	}
+
+	.searchButton{
+	  width: 100px;
+	  height: $form-height;
+	  font-size: 14px;
+	  margin: 0;
+
+	  //line-height: $form-height;
+  }
+
+  .advanced-search-button-div{
+		padding: 0;
+		color: white;
+		margin:0;
+		a{
+			color: white;
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
+		.advanced-search-link{
+			display: block;
+			margin: 3px 0;
+			padding: 0;
+			position: relative;
+	  	z-index: 1;
+	  	font-size: 14px;
+	  	font-weight: 300;
+		}
+
+		
+
+		
+
+
+	}
+
+
+
+
+
+}
+
+
+

@@ -1,0 +1,11 @@
+<div class="a-card" ui-draggable="true" drag="card">
+	<img src="" ng-click="itemClicked(card.docID)"  data-ng-src="{{card.imageLocation}}">
+
+	<h4>{{card.label}}</h4>
+	<div ng-show="tools.active" class="tools-icons">
+		<span title="Add to collection" class="fi-plus" ng-show="tools.collections" ng-click="itemAddedToCollection(card.docID)"></span>
+		<span title="Annotate" class="fi-annotate" ng-show="tools.annotations" ng-click="annotateItem(card.docID)"></span>
+		<span title="Add to story" class="fi-pencil" ng-show="tools.stories" ng-click="addItemToStory(card.docID)"></span>
+
+	</div>
+</div>

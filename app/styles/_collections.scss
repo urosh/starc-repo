@@ -1,0 +1,205 @@
+.collections-container{
+	
+	position: relative;
+
+	min-height: 450px;
+	padding: 0;
+	background-color: $grey12;
+	overflow: auto;
+	overflow-y: hidden;
+
+	font-weight: 300;
+	padding: 5px;
+	margin-bottom:3px;
+	.collections-menu{
+		margin-bottom: 3px;
+	}
+
+	h3{
+		padding: 0 0 2px;
+		margin: 0;
+		width: 190px;
+		font-size: 18px;
+		color: $oil;
+
+	}
+
+	span{
+		-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+		background-color: #66718b;
+		width: 20px;
+		height: 20px;
+		line-height: 18px;
+		font-size: 18px;
+		text-align: center;
+		border: solid 1px $orange7;
+		display: inline-block;
+	//	padding: 5px 3px 4px 4px;
+		cursor: pointer;
+	}
+
+	.collections-container span:hover{
+	  background-color: #2d3956;
+
+	}
+
+	.image-container {
+		padding:0;
+		display: inline-block;
+		height: 72px;
+		float: left;
+		margin: 0 1px 1px 0;
+		border: solid 1px #2d3956;
+		position: relative;
+
+	}
+
+	
+	img{
+		
+		padding: 0;
+		cursor: pointer;
+		height: 70px !important;
+
+	}
+
+	.item-icons {
+		position: absolute;
+		top: 3px;
+		right: 1px;
+		width: 20px;
+		height: 44px;
+	}
+
+	.item-icons span{
+		width: 18px;
+		height: 18px;
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		text-align: center;
+
+		cursor: pointer;
+		margin-bottom: 2px;
+		&:hover{
+			color: darken(white, 15%);
+		}
+	}
+
+
+	.collection-dialog{
+		padding: 5px;
+		-webkit-transition:0.2s linear all;
+	  transition:0.2s linear all;
+	  opacity:1;
+	  height: 300px;
+	  padding-left: 0;
+
+	}
+
+	.collection-dialog.ng-hide{
+		opacity: 0;
+		height: 0;
+	}
+
+	.collection-dialog.save textarea{
+		display: block;
+		margin: 0 0 5px 0;
+		//width: 350px;
+		height: 160px;
+		font-weight: normal;
+	}
+
+	.collection-dialog.save input[type="text"]{
+		margin: 0 0 5px 0;
+		//width: 350px;
+		height: 28px;
+		line-height: 24px;
+		font-weight: normal;
+
+		
+	}
+
+
+	.collection-dialog p{
+		//font-weight: bold;
+		margin: 0;
+		color: $oil;
+		padding: 2px 0 7px 0;
+		font-size: 14px;
+	}
+
+	.collection-dialog .button{
+		//display: inline-block;
+		width: 80px;
+		height: 28px;
+		background-color: transparent;
+		border: solid 1px $oil;
+		color: $oil;
+		margin: 0px;
+		padding: 0;
+		text-align: center;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 26px;
+		transition: all 0.2s;
+		&:hover{
+		transition: all 0.2s;
+			color: lighten($oil, 25%);
+			border: solid 1px lighten($oil, 25%);
+		}
+		
+	}
+
+	.my-dialog{
+		
+		p{
+			background: $light-blue;
+			width: 350px;
+			height: 32px;
+			padding: 0 4px;
+			line-height: 30px;
+			font-size: 14px;
+			font-weight: 300;
+			margin: 5px 0;
+		}
+	}
+
+	.my-dialog.question{
+		height: 66px;
+		//border: solid 1px red;
+	}
+
+	.my-dialog .button{
+		display: inline-block;
+		width: 70px;
+		height: 24px;
+		background-color: transparent;
+		margin: 0px;
+		text-align: center;
+		text-decoration: none;
+		color: white;
+		padding: 0px;
+		font-size: 13px;
+		line-height: 24px;
+		margin-right: 5px;
+		border: solid 1px $mynavy;
+		color: $mynavy;
+		&:hover{
+			color: lighten($mynavy, 20%);
+			border: solid 1px lighten($mynavy, 20%);
+		}
+
+	}
+
+	
+
+
+	/*border: solid 1px #2d3956;*/
+}

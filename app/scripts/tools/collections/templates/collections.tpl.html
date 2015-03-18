@@ -1,0 +1,28 @@
+<div class="collections-container">
+  <div class="collections-menu">
+    <h3>Add items to collection</h3>
+    <span ng-click="vm.saveDialog=!vm.saveDialog; vm.dialogActive=false;" title="Save collecion" class="fi-save"></span>
+    <span ng-click="vm.clearCollection()" title="Clear collection" class="fi-x"></span>
+
+
+   <starc-dialog ng-show="vm.dialogActive" classes="vm.dialogClasses" type="vm.dialogType" text="vm.dialogText" response="vm.clearCollection(option)"></starc-dialog>
+
+    <div ng-show="vm.saveDialog" ng-class="['collection-dialog', 'save']">
+      <p>Collection title</p>
+      <input ng-model="vm.collectionTitle" type="text">
+      <p>Collection description</p>
+      <textarea  ng-model="vm.collectionText" ></textarea>
+      <a href=""  ng-click="vm.saveCollection(true)" class="button">Save</a>
+
+    </div>
+
+  </div>
+  <div ng-click="vm.itemActive($index)" class="image-container" ng-repeat="item in vm.items">
+    <img  ng-src="{{item.imageLocation}}" height="60px"/>
+    <div ng-show="item.active" class="item-icons">
+      <span ng-click="vm.showDetails(item.docID)" class="fi-zoom-in"></span>
+      <span ng-click="vm.removeItem(item.docID)" class="fi-x"></span>
+    </div>
+
+  </div>
+</div>

@@ -18,8 +18,18 @@ angular
     'ngTouch',
     'ngMessages',
     'app.authentication',
+    'ngAnimate',
     'angular-jwt',
-    'app.explore'
+    'app.d3',
+    'app.explore',
+    'app.commons',
+    'app.tools.search',
+    'app.tools.map',
+    'app.tools.annotations',
+    'app.tools.collections',
+    'app.tools.statistics',
+    'app.tools.visualizations',
+    'app.tools.stories'
     
   ], config);
   
@@ -27,7 +37,8 @@ angular
   
 
 angular.module('starcRepoApp')
-  .constant('API_URL', 'http://localhost:8000/api');
+  .constant('API_URL', 'http://starc-srv.cyi.ac.cy/api');
+
 
 
 

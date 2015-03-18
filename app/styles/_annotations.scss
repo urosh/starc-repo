@@ -1,0 +1,250 @@
+.annotation-container{
+	
+	min-height: 450px;
+	padding: 0;
+	margin: 0 0 3px 0;
+	background-color: brown;
+	background-color: $blue3;
+	background-color: $grey2;
+	background-color: $light-blue;
+	
+	font-weight: 300;
+	padding: 5px;
+	
+	h3{
+		padding: 0 0 4px;
+  	margin: 0;
+		width: 150px;
+		font-size: 18px;
+		color: white;
+		font-weight: 300;
+		color: $orange7;
+	
+	}
+	p{
+		font-weight: 300;
+		font-size: 14px;
+		margin: 0;
+	}
+	.image-container{
+		position: relative;
+		height: 400px;
+		width: 400px;
+	}
+
+	.img-mask{
+		position: absolute;
+		top: -20px;
+		left: -20px;
+		clip: rect(20px, 140px, 60px, 20px);
+		min-width: 350px !important;
+		-moz-user-select: none;
+	  -webkit-user-select: none;
+	  /* this will work for QtWebKit in future */
+	  -webkit-user-drag: none;
+
+		cursor: move; 
+	}
+
+	.mask-div{
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 120px;
+		height: 40px;
+		outline: dotted 1px grey;
+		
+		
+	}
+
+	.img-original{
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.4;
+		pointer-events: none;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-tap-highlight-color:transparent;
+
+	}
+
+	.handler{
+		width: 8px;
+		height: 8px;
+		position: absolute;
+		background-color: black;
+		cursor: pointer;
+	}
+
+	.handler.top-left{
+		top: -8px;
+		left: -8px;
+
+	}
+
+	.handler.top-right{
+		top: -8px;
+		right: -8px;
+	}
+
+	.handler.bottom-left{
+		bottom: -8px;
+		left: -8px;
+
+	}
+
+	.handler.bottom-right{
+		right: -8px;
+		bottom: -8px;
+	}
+
+	
+	.annotation-form textarea{
+		display: block;
+		margin: 0 0 5px 0;
+		//width: 350px;
+		height: 140px;
+		font-weight: normal;
+	}
+
+	.annotation-form input[type="text"]{
+		//margin: 0 0 5px 0;
+		//width: 350px;
+		//height: 24px;
+		line-height: 24px;
+		font-weight: normal;
+		
+	}
+
+
+	.annotation-form p{
+		//font-weight: bold;
+		font-weight: 300;
+
+		margin: 0;
+		//padding: 2px 0 7px 0;
+		font-size: 14px;
+		color: $orange7;
+	}
+	.annotation-form .button{
+		display: inline-block;
+		width: 80px;
+		height: 28px;
+		background-color: transparent;
+		margin: 0px;
+		text-align: center;
+		text-decoration: none;
+		color: white;
+		padding: 0px;
+		font-size: 14px;
+		line-height: 26px;
+		margin-top: 5px;
+		border: solid 1px white;
+		transition: all 0.2s;
+		font-weight: 300;
+		letter-spacing: 1px;
+
+		&:hover{
+			transition: all 0.2s;
+			
+			color: darken(white, 25%);
+			border: solid 1px darken(white, 25%);
+		}
+
+
+	}
+	.annotation-form{
+		margin-bottom: 5px;
+
+		.my-dialog{
+			background: $mynavy;
+			width: 350px;
+			height: 32px;
+			padding: 0 4px;
+			line-height: 32px;
+			p{
+				font-size: 18px;
+				
+			}
+		}
+
+		
+
+
+	}
+
+
+	.annotation-menu{
+    margin-bottom: 5px;
+	}
+	.annotation-menu .my-icon{
+	    background-color: #66718b;
+	    width: 20px;
+	    height: 20px;
+	    display: inline-block;
+	    font-size: 16px;
+	    line-height: 18px;
+	    cursor: pointer;
+	    text-align: center;
+	    border: solid 1px white;
+	}
+
+	.annotation-menu .my-icon:hover{
+	    background-color: #2d3956;
+	}
+
+	
+	.annotation-menu .my-icon.active{
+	    background-color: $orange7;
+	}
+
+
+	.annotations-list-container div:first-child {
+	    position: relative;
+	}
+
+	.annotations-list-container .annotation-marker{
+	    border: dotted 3px $orange7;
+	    position: absolute;
+
+	}
+
+	.annotations-list-container img{
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	}
+	.annotations-list-container span{
+	    position: absolute;
+	    width: 8px;
+	    height: 8px;
+	    background-color: orange;
+	    border-radius: 8px;
+	    border: solid 2px firebrick;
+	    cursor: pointer;
+	    z-index: 10000;
+	}
+
+	.annotation-list-description p{
+	    //font-weight: bold;
+	    margin: 0;
+	    padding: 2px 0 0 0;
+	    font-size: 16px;
+	    color: $orange7;
+	}
+
+
+
+
+
+
+}
+
+
+
+

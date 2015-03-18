@@ -1,0 +1,41 @@
+
+<div ng-click="vm.blockSelected()" ng-class="vm.menuActive ? 'story-block active' : 'story-block'">
+
+  <div class="story-block-menu" >
+    <span class="icon-holder fi-plus" ng-click="manageBlock('add')" title="add block"></span>
+    <span ng-show=" type !== 'title' " class="icon-holder fi-x" ng-click="manageBlock('remove')" title="remove block"></span>
+    <span ng-show="type !== 'title' " ng-click="vm.setBlockType('object')" ng-class="type === 'object' ? 'icon-holder fi-photo active' : 'icon-holder fi-photo'" title="add object"></span>
+    <span ng-show="type !== 'title'" ng-click="vm.setBlockType('text')" title="add text" ng-class="type === 'text' ? 'icon-holder fi-pencil active' : 'icon-holder fi-pencil'"></span>
+    <span class="block-description">{{vm.blockTitle}}</span>
+
+  </div>
+
+  <div ng-show="type === 'object'"   class="object-container">
+    <!--<img src="images/add-object.png" height="80px"></img>-->
+    <div  class="selected-objects">
+      <div ng-repeat="img in vm.selectedObjects" class="selected-container">
+        <div class="image-container">
+          <img ng-src="{{img.imageLocation}}" height="60px"/>
+          <div class="remove-button">
+            <span ng-click="removeItemFromObjects($index)" class="fi-x"></span>
+          </div>
+        </div>
+        <div class="label">
+          <span>{{img.label}}</span>
+        </div>
+
+      </div>
+    </div>
+    <div ng-show="drop && vm.dropEnabled" ui-on-Drop="contentChanged('object', $data)"  class="notification-container">
+      <span>Add objects</span>
+    </div>
+  </div>
+
+  <div ng-show="type === 'text'" class="text-container">
+    <textarea ng-change="contentChanged('text', $index)" ng-model="vm.text" ></textarea>
+  </div>
+
+  <div ng-show="type === 'title'" class="title-container">
+    <input type="text" ng-change="contentChanged('title', $index)" ng-model="vm.title"></input>
+  </div>
+</div>

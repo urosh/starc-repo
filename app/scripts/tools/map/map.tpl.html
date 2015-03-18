@@ -1,0 +1,13 @@
+<div class="map-container" >
+  <ui-gmap-google-map center='mapCtrl.map.center'  zoom='mapCtrl.map.zoom' options="{'mapTypeControl': false, 'panControl' : false, 'streetViewControl': false, 'draggable': mapCtrl.map.draggable}" events="mapCtrl.map.events" >
+  	<ui-gmap-markers models="mapCtrl.markers" coords="'self'" icon="'icon'" click="mapCtrl.onClicked"></ui-gmap-markers>
+  	<ui-gmap-map-control template="scripts/tools/map/map.controls.tmpl.html" position="top-right" controller="ControlsController"   index="-1"></ui-gmap-map-control>
+  	<ui-gmap-rectangle bounds="mapCtrl.searchBounds.bounds" events="mapCtrl.searchBounds.events" editable="true" draggable="true" visible="mapCtrl.searchActive" fill="'#2d3956 .5'" stroke="{'color': '#2d3956' }"></ui-gmap-rectangle>
+
+	</ui-gmap-google-map>
+
+</div>
+
+
+
+<!-- ng-controller="mapController as mapCtrl" -->

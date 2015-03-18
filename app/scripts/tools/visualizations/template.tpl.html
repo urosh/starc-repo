@@ -1,0 +1,24 @@
+<div class="vis-container" ng-controller="VisController as visCtrl">
+  <h3>Visualize data</h3>
+  <div class="wrapper-demo">
+    <div id="dd" ng-class="(active) ? 'wrapper-dropdown active' : 'wrapper-dropdown '"  ng-click="active=!active"  tabindex="1">
+      Select visualization
+      <ul  class="dropdown">
+        <li ng-repeat="item in visCtrl.visList"><a ng-click="visCtrl.selectTool($index);" href="">{{item.name}}</a></li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="data-source">
+    <span>Data source: </span>
+    <span ng-class="(visCtrl.resultsActive) ? 'choice' : 'choice active'" ng-click="visCtrl.resultsActive=false" >whole repository</span>
+    <span ng-class="(visCtrl.resultsActive) ? 'choice active' : 'choice'" ng-click="visCtrl.resultsActive=true">search results</span>
+  </div>
+
+  <div class="vis">
+    <p ng-show="visCtrl.visList[1].visible">Second</p>
+    <p ng-show="visCtrl.visList[2].visible">Third</p>
+    <starc-time-bar datasrc="visCtrl.resultsActive" ng-show="visCtrl.visList[0].visible" bartitle="Data upload over time"></starc-time-bar>
+  </div>
+</div>

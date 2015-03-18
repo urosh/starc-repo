@@ -16,9 +16,10 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Neuton|Lora|PT+Sans|PT+Sans+Narrow|PT+Serif|Play|Open+Sans|PT+Sans+Caption|Raleway+Dots|Roboto:400,400italic,700,300&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/x3dom.css">
     <link rel="stylesheet" href="styles/foundation-icons/foundation-icons.css" />
 
     <!-- endbuild -->
@@ -34,7 +35,7 @@
         <div ui-view="content"></div>
       </div>
 
-    
+    <div starc-modal></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -68,11 +69,30 @@
     <script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
     <script src="bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
         
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        
+
+        <script src="scripts/x3dom.js"></script>
+
+        <!-- Common services -->
+        <script src="scripts/common/commons.module.js"></script>
+        <script src="scripts/common/services/common.services.js"></script>
+        <script src="scripts/common/services/request.factory.js"></script>
+        <script src="scripts/common/services/display.factory.js"></script>
+        <script src="scripts/common/services/data.model.js"></script>
+        <script src="scripts/common/services/search.service.js"></script>
+        <script src="scripts/common/directives/modal.directive.js"></script>
+        <script src="scripts/common/directives/preloader.directive.js"></script>
+        <script src="scripts/common/directives/preloader.directive2.js"></script>
+        <script src="scripts/common/directives/dialog.directive.js"></script>
+        <script src="scripts/common/directives/scrollbar.directive.js"></script>
+        <script src="scripts/common/directives/x3dom.directive.js"></script>
+
         <script src="scripts/app.js"></script>
         <script src="scripts/authentication/authentication.module.js"></script>
         <script src="scripts/app.states.js"></script>
@@ -91,10 +111,63 @@
         
         <!-- Explore -->
         <script src="scripts/explore/explore.module.js"></script>
+        <script src="scripts/explore/explore.states.js"></script>
 
+        <!-- Search tool -->
+        <script src="scripts/tools/search/search.module.js"></script>
+        <script src="scripts/tools/search/search.directive.js"></script>
+        <script src="scripts/tools/search/facets.service.js"></script>
+        <script src="scripts/tools/search/facets.directive.js"></script>
+        <script src="scripts/tools/search/pagination.directive.js"></script>
+        <script src="scripts/tools/search/search.history.service.js"></script>
+        <script src="scripts/tools/search/search.history.js"></script>
 
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <!--Deckgrid tool  -->
+        <script src="scripts/tools/deckgrid/deckgrid.module.js"></script>
+        <script src="scripts/tools/deckgrid/deckgrid.controller.js"></script>
+        <script src="scripts/tools/deckgrid/deckgrid.directive.js"></script>
+
+        <!-- Map tool -->
+        <script src="scripts/tools/map/map.module.js"></script>
+        <script src="scripts/tools/map/map.service.js"></script>
+        <script src="scripts/tools/map/map.js"></script>
+        
+        <!-- Annotations tool -->
+        <script src="scripts/tools/annotations/annotations.module.js"></script>
+        <script src="scripts/tools/annotations/crop.directive.js"></script>
+        <script src="scripts/tools/annotations/annotations.service.js"></script>
+        <script src="scripts/tools/annotations/annotations.directive.js"></script>
+        <script src="scripts/tools/annotations/list.annotations.directive.js"></script>
+
+        <!-- Collections tool -->
+        <script src="scripts/tools/collections/collections.module.js"></script>
+        <script src="scripts/tools/collections/collections.service.js"></script>
+        <script src="scripts/tools/collections/collections.directive.js"></script>
+
+        <!-- Statistics tool -->
+        <script src="scripts/tools/statistics/statistics.module.js"></script>
+        <script src="scripts/tools/statistics/statistics.directive.js"></script>
+
+        <!-- d3 module-->
+        <script src="scripts/d3/d3.js"></script>
+
+        <!-- Vis tool -->
+        <script src="scripts/tools/visualizations/visualization.module.js"></script>
+        <script src="scripts/tools/visualizations/visualization.service.js"></script>
+        <script src="scripts/tools/visualizations/visualization.controller.js"></script>
+        <script src="scripts/tools/visualizations/time.bar.directive.js"></script>
+        <script src="scripts/tools/visualizations/visualization.directive.js"></script>
+
+        <!-- Stories tool -->
+        <script src="scripts/tools/stories/stories.module.js"></script>
+        <script src="scripts/tools/stories/stories.data.model.js"></script>
+        <script src="scripts/tools/stories/stories.service.js"></script>
+        <script src="scripts/tools/stories/stories.block.directive.js"></script>
+        <script src="scripts/tools/stories/stories.tabs.directive.js"></script>
+        <script src="scripts/tools/stories/stories.directive.js"></script>
+        <script src="scripts/tools/stories/stories.preview.block.directive.js"></script>
+        <script src="scripts/tools/stories/stories.preview.directive.js"></script>    
+
         <!-- endbuild -->
 
 </body>

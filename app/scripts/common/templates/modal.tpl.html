@@ -1,0 +1,24 @@
+<div class='md-content' >
+	<span class="md-icon-close fi-x" ng-click="vm.removeModal()"></span>
+	<p class="title">{{vm.title}}</p>
+	<div class="details-modal"  >
+		<div class="image-container">
+			
+			<img ng-show="!vm.x3dType" ng-src="{{vm.imageLocation}}" width="380">
+   		     
+   		<x3d-starc ng-show='vm.x3dType'></x3d-starc> 
+			
+
+			<preloader ng-show="vm.preloaderActive" ></preloader>
+			<!-- <div class="download-div"><a target="_self" ng-href="http://public.cyi.ac.cy/starcRepo/db/metadata/{{vm.docID}}.xml" download="{{vm.docID}}" ><span class="fi-download" title="Donwload object"></span></a></div> -->
+		</div>
+		<div class="metadata-container" scrollbar  >
+
+      <div class="metadata-fileds" ng-repeat="key in vm.metadata">
+				<span class="metadata-label">{{key[0]}}</span> : <span class="metadata-content">{{key[1]}}</span>
+				
+			</div>
+
+		</div>
+	</div>
+</div>

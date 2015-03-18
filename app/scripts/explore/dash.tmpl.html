@@ -1,0 +1,47 @@
+<div class="dashboard-container">
+
+	<div class="row dash-row">
+		<div class="small-12 columns search-menu">
+			<ul>
+				<li ng-click="dashCtrl.toolSelected('map')" ng-class="{ active: dashCtrl.map}" ><span class="fi-map"></span><span>Map</span></li>
+				<li ng-click="dashCtrl.toolSelected('annotations')" ng-class="{ active: dashCtrl.annotations}"><span class="fi-annotate"></span><span>Annotations</span></li>
+				<li ng-click="dashCtrl.toolSelected('collections')" ng-class="{ active: dashCtrl.collections}"><span class="fi-folder"></span><span>Collections</span></li>
+				<li ng-click="dashCtrl.toolSelected('statistics')" ng-class="{ active: dashCtrl.statistics}"><span class="fi-graph-pie"></span><span>Statistics</span></li>
+				<li ng-click="dashCtrl.toolSelected('visualizations')" ng-class="{ active: dashCtrl.visualizations}"><span class="fi-graph-bar"></span><span>Visualization</span></li>
+				<li ng-click="dashCtrl.toolSelected('stories')" ng-class="{ active: dashCtrl.stories}"><span class="fi-comments"></span><span>Stories</span></li>
+			
+			</ul>
+		</div>
+		<div class="small-12  medium-7 columns search-col">
+			
+			<starc-search></starc-search>
+			<div class="search-results">
+
+	    	<starc-facets></starc-facets>
+	    	<starc-pagination ></starc-pagination>
+	    	<starc-search-history ></starc-search-history>
+	    	<!-- <h3>Search results</h3> -->
+    	<div deckgrid class="deckgrid"  cardTemplate="scripts/tools/deckgrid/template/card.tpl.html">
+
+    	</div>
+	  	
+	  	</div> 
+
+		</div>
+		<div class="small-12  medium-5 columns tools-col">
+			<starc-map ng-show="dashCtrl.map"></starc-map>
+			<starc-annotations ng-show="dashCtrl.annotations"></starc-annotations>
+			<starc-collections ng-show="dashCtrl.collections"></starc-collections>
+			<starc-stats ng-show="dashCtrl.statistics"></starc-stats>
+			<starc-vis ng-show="dashCtrl.visualizations"></starc-vis>
+			<starc-stories ng-show="dashCtrl.stories"></starc-stories>
+			<!-- <x3d xmlns="http://www.x3dom.org/x3dom" width='280px' height='280px'> 
+    		<scene>
+					<inline nameSpaceName="Deer"  url="http://localhost/x3d/test.x3d" >  </inline>
+    		</scene> 
+    	</x3d> -->
+
+		</div>
+	</div>
+</div>
+
